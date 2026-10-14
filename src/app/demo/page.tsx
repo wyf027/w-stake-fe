@@ -1,5 +1,5 @@
 "use client";
-import { HashRouter, Routes, Route, Navigate, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate, NavLink } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import EthersBalanceChecker from "../components/ethers/BalanceChecker";
 import EthersTransactionSender from "../components/ethers/TransactionSender";
@@ -89,7 +89,7 @@ function HashRouterNav() {
     <div className="bg-white shadow-sm border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex space-x-8 py-4">
-          <Link
+          <NavLink
             to="/ethers"
             className={({ isActive }: { isActive: boolean }) =>
               `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -100,8 +100,8 @@ function HashRouterNav() {
             }
           >
             Ethers.js
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/wagmi"
             className={({ isActive }: { isActive: boolean }) =>
               `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -112,8 +112,8 @@ function HashRouterNav() {
             }
           >
             Wagmi
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/viem"
             className={({ isActive }: { isActive: boolean }) =>
               `px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -124,7 +124,7 @@ function HashRouterNav() {
             }
           >
             Viem
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>
